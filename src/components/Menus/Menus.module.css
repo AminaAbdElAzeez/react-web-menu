@@ -1,0 +1,90 @@
+.menus {
+  margin-bottom: 80px;
+  /* padding: 50px 0; */
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.menusSubTitle {
+  text-align: center;
+  color: #ff6868;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.menusTitle {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.menusContent {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.menusCard {
+  width: 230px;
+  padding-bottom: 25px;
+  box-shadow: 0px 0px 13px -3px #8dc63f;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.ant-image {
+  text-align: center;
+}
+:where(.css-dev-only-do-not-override-7ny38l).ant-image .ant-image-img {
+  width: 200px;
+  height: 300px;
+}
+.menus :where(.css-dev-only-do-not-override-7ny38l).ant-image .ant-image-mask {
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+.menusImg {
+  width: 200px;
+  height: 300px;
+}
+.menusItemTitle {
+  text-align: center;
+  color: #000;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  padding-top: 10px;
+}
+.ant-image-preview-img {
+  max-width: 80% !important;
+}
+.line {
+  width: 80px;
+  height: 2px;
+  background-color: #8dc63f;
+  margin: 0 auto;
+}
+@media screen and (max-width: 430px) {
+  .menusSubTitle {
+    font-size: 16px;
+  }
+  .menusTitle {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 361px) {
+  .menusTitle {
+    font-size: 19px;
+  }
+}

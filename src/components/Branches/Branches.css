@@ -1,0 +1,72 @@
+.branches {
+  margin-bottom: 80px;
+}
+.branches-title {
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+}
+.branches-desc {
+  font-size: 15px;
+  color: #828282;
+  text-align: center;
+  width: 450px;
+  margin: 0 auto 30px auto;
+  font-weight: 500;
+}
+.branches-slider {
+  width: 90%;
+  margin: 0 auto;
+}
+.branch-card {
+  height: 340px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.branch-content {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.branch-content > img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 30px;
+}
+.branch-title {
+  font-size: 14px;
+  color: #828282;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.branch-address {
+  font-size: 15px;
+  color: #252b33;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.branch-phone {
+  color: #8dc63f;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.branch-phone > img {
+  margin-right: 5px;
+}
+.slick-slide {
+  margin: 0 19px;
+}
