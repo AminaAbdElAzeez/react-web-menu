@@ -56,6 +56,20 @@ const resources = {
       privacy: "Privacy Policy",
       terms: "Terms & Conditions",
       copyright: "Copyright ©2024 Apps Square",
+      // card
+      cardTitle1: "Branches",
+      cardTitle2: "Menus",
+      learn: "Learn More",
+
+      cairoLink: "Cairo",
+      zagazigLink: "Zagazig",
+      tantaLink: "Tanta",
+      almahalaLink: "Almahala",
+
+      cairoMenu: "Cairo Menu",
+      zagazigMenu: "Zagazig Menu",
+      tantaMenu: "Tanta Menu",
+      almahalaMenu: "Almahala Menu",
     },
   },
   ar: {
@@ -110,6 +124,20 @@ const resources = {
       privacy: "سياسة الخصوصية",
       terms: "الشروط والأحكام",
       copyright: "حقوق الطبع والنشر © 2024 Apps Square",
+      // card
+      cardTitle1: "الفروع",
+      cardTitle2: "القوائم",
+      learn: "لمعرفة المزيد",
+
+      cairoLink: "القاهرة",
+      zagazigLink: "الزقازيق",
+      tantaLink: "طنطا",
+      almahalaLink: "المحلة",
+
+      cairoMenu: "قائمة القاهرة",
+      zagazigMenu: "قائمة الزقازيق",
+      tantaMenu: "قائمة طنطا",
+      almahalaMenu: "قائمة المحلة",
     },
   },
 };

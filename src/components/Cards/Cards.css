@@ -1,0 +1,73 @@
+.cards {
+  margin-bottom: 80px;
+}
+.cards-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.card-item {
+  text-align: center;
+  width: 240px;
+}
+.card-img {
+  width: 75px;
+  height: 95px;
+  margin-bottom: 10px;
+}
+.card-title {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.card-title:hover {
+  color: #ff330f;
+}
+.card-item .cards-item-btn {
+  height: 50px;
+  width: 100% !important;
+  color: #8dc63f;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #8dc63f;
+  transition: background-color 0.5s, color 0.5s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  -moz-transition: background-color 0.5s, color 0.5s;
+  -ms-transition: background-color 0.5s, color 0.5s;
+  -o-transition: background-color 0.5s, color 0.5s;
+}
+.card-item .cards-item-btn:hover {
+  color: #fff;
+  background-color: #8dc63f !important;
+}
+.card-icon {
+  margin-left: 5px;
+  animation: bounce 1s infinite ease-in-out alternate;
+  -webkit-animation: bounce 1s infinite ease-in-out alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+  }
+}

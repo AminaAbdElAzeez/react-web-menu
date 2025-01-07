@@ -1,8 +1,9 @@
 .branches {
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
+  padding: 20px 0 40px 0;
   overflow: hidden;
 }
-.branches-title {
+/* .branches-title {
   font-size: 33px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -14,27 +15,22 @@
   -moz-transition: color 0.5s;
   -ms-transition: color 0.5s;
   -o-transition: color 0.5s;
-}
-.branches-title:hover {
+} */
+/* .branches-title:hover {
   color: #ff330f;
-}
-.branches-desc {
+} */
+/* .branches-desc {
   font-size: 15px;
   color: #828282;
   text-align: center;
   width: 450px;
   margin: 0 auto 30px auto;
   font-weight: 500;
-}
-.link-card {
-  text-decoration: none;
-}
+} */
 .branch-card {
-  width: 90%;
-  min-width: 220px;
-  max-width: 250px;
+  width: 190px !important;
   margin: 0 auto;
-  height: 380px;
+  height: 350px;
   background: #fff;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
@@ -61,7 +57,7 @@
   font-weight: 500;
 }
 .branch-address {
-  font-size: 19px;
+  font-size: 14px;
   color: #252b33;
   margin-bottom: 20px;
   font-weight: 600;
@@ -78,15 +74,18 @@
   margin-right: 5px;
 }
 .slick-list {
-  height: 400px;
+  height: 350px;
   overflow: hidden;
 }
-.slick-slide {
-  margin: 0 4px;
-}
-.slick-slide {
+.slick-track,
+.slick-slider,
+.slick-slide,
+.branches-slider {
   display: flex !important;
   justify-content: center !important;
+  align-items: center !important;
+  gap: 10px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 320px) {
@@ -111,6 +110,9 @@
   .branches-desc {
     font-size: 14px;
   }
+  .branch-card {
+    width: 188px !important;
+  }
 }
 @media screen and (max-width: 354px) {
   .branches-title {
@@ -123,5 +125,11 @@
   }
   .branches-desc {
     font-size: 13px;
+  }
+  .branch-card {
+    width: 170px !important;
+  }
+  .branch-address {
+    font-size: 12px;
   }
 }

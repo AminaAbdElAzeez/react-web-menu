@@ -1,6 +1,7 @@
 import "./App.css";
 import About from "./components/About/About";
 import Branches from "./components/Branches/Branches";
+import Cards from "./components/Cards/Cards";
 import Contact from "./components/Contact/Contact";
 import Dawnload from "./components/Dawnload/Dawnload";
 import Kinds from "./components/Kinds/Kinds";
@@ -12,11 +13,12 @@ function App() {
   return (
     <div className="App">
       <Dawnload />
-      <Kinds />
+      {/*<Kinds />*/}
       <About />
-      <Menus />
+      <Cards />
+      {/*<Menus />*/}
       <Services />
-      <Branches />
+      {/*<Branches />*/}
       <Contact />
       <Pocket />
     </div>

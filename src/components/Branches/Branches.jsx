@@ -38,24 +38,25 @@ function Branches() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    arrows: true,
     centerMode: true,
     centerPadding: "10px",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -72,8 +73,6 @@ function Branches() {
   return (
     <section className="branches">
       <div className="container">
-        <h2 className="branches-title">{t("branchTitle")}</h2>
-        <p className="branches-desc">{t("branchDesc")}</p>
         <div className="branches-slider">
           <Slider {...settings}>
             {branches.map((branch, index) => (
@@ -81,7 +80,16 @@ function Branches() {
                 <div className="branch-content">
                   <img src={image1} alt="location icon" />
                   <p className="branch-desc">{branch.desc}</p>
-                  <h4 className="branch-address">{branch.address}</h4>
+                  <a
+                    className="branch-address"
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                      branch.address
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {branch.address}
+                  </a>
                   <p className="branch-phone">
                     <img src={image2} alt="phone icon" />
                     {branch.phone}
