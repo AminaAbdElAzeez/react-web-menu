@@ -1,5 +1,6 @@
 .branches {
   margin-bottom: 80px;
+  overflow: hidden;
 }
 .branches-title {
   font-size: 33px;
@@ -8,6 +9,14 @@
   text-align: center;
   text-transform: uppercase;
   color: #333333;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.branches-title:hover {
+  color: #ff330f;
 }
 .branches-desc {
   font-size: 15px;
@@ -17,22 +26,21 @@
   margin: 0 auto 30px auto;
   font-weight: 500;
 }
-.branches-slider {
-  width: 90%;
-  margin: 0 auto;
+.link-card {
+  text-decoration: none;
 }
 .branch-card {
-  height: 340px;
+  width: 90%;
+  min-width: 220px;
+  max-width: 250px;
+  margin: 0 auto;
+  height: 380px;
   background: #fff;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
   padding: 20px 10px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 .branch-content {
   text-align: center;
@@ -46,20 +54,22 @@
   height: auto;
   margin-bottom: 30px;
 }
-.branch-title {
+.branch-desc {
   font-size: 14px;
   color: #828282;
   margin-bottom: 30px;
   font-weight: 500;
 }
 .branch-address {
-  font-size: 15px;
+  font-size: 19px;
   color: #252b33;
   margin-bottom: 20px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .branch-phone {
   color: #8dc63f;
+  font-size: 18px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -67,6 +77,51 @@
 .branch-phone > img {
   margin-right: 5px;
 }
+.slick-list {
+  height: 400px;
+  overflow: hidden;
+}
 .slick-slide {
-  margin: 0 19px;
+  margin: 0 4px;
+}
+.slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+@media screen and (max-width: 320px) {
+  .branch-address {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 516px) {
+  .branches-desc {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 470px) {
+  .branches-title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .branches-title {
+    font-size: 25px;
+  }
+  .branches-desc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 354px) {
+  .branches-title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 314px) {
+  .branches-title {
+    font-size: 19px;
+  }
+  .branches-desc {
+    font-size: 13px;
+  }
 }

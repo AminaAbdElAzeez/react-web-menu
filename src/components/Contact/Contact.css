@@ -63,6 +63,14 @@
   font-weight: 700;
   text-transform: capitalize;
   margin-bottom: 30px;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.contact-title:hover {
+  color: #ff330f;
 }
 .contact-form {
   width: 85%;
@@ -76,13 +84,15 @@
   border: 1px solid #8dc63f;
   outline: none;
 }
-.contact-form-btn {
+.contact .contact-form-btn {
   background-color: #8dc63f;
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 15px;
   padding: 20px 15px;
+  width: 130px;
+  height: 50px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

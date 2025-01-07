@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 50px;
+  gap: 250px;
 }
 .download-left,
 .download-right {
@@ -33,6 +33,7 @@
 .download-title + p {
   font-size: 28px;
   color: #1e1e1e;
+  text-transform: capitalize;
 }
 .download-right {
   text-align: right;
@@ -42,8 +43,8 @@
 .download-right img {
   width: 430px;
   height: 430px;
-  animation: circular-move 2.5s linear infinite running;
-  -webkit-animation: circular-move 2.5s linear infinite running;
+  animation: circular-move 3s linear infinite running;
+  -webkit-animation: circular-move 3s linear infinite running;
 }
 .download-right img:hover {
   animation-play-state: paused;
@@ -65,6 +66,9 @@
   }
 }
 @media screen and (max-width: 1115px) {
+  .download-content {
+    gap: 80px;
+  }
   .download-title {
     font-size: 40px;
   }
@@ -74,6 +78,9 @@
   }
 }
 @media screen and (max-width: 992px) {
+  .download-content {
+    gap: 50px;
+  }
   .download-title {
     font-size: 32px;
   }

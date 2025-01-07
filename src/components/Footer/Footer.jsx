@@ -1,16 +1,19 @@
 import image1 from "../../assets/fb-ic.svg";
 import image2 from "../../assets/insta-ic.svg";
 import "./Footer.css";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t, i18n } = useTranslation();
+
   return (
     <footer>
       <div className="container">
         <div className="footer-content">
           <ul className="footer-left">
-            <li>about Us</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
+            <li>{t("aboutUs")}</li>
+            <li>{t("privacy")}</li>
+            <li>{t("terms")}</li>
           </ul>
           <ul className="footer-right">
             <li>
@@ -22,7 +25,7 @@ function Footer() {
           </ul>
         </div>
         <hr />
-        <p className="copyright">Copyright ©2024 Apps Square</p>
+        <p className="copyright">{t("copyright")}</p>
       </div>
     </footer>
   );

@@ -11,3 +11,11 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}

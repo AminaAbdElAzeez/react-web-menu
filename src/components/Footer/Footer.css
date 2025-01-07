@@ -27,6 +27,14 @@ footer {
   color: #2b2b2b;
   font-size: 15px;
   font-weight: 600;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.footer-left li:hover {
+  color: #ff330f;
 }
 .footer-content + hr {
   width: 90%;
@@ -34,12 +42,28 @@ footer {
   margin: 12px auto;
   background-color: #6a6a6a;
 }
+.footer-right li {
+  width: 35px;
+  height: 35px;
+}
+.footer-right li img {
+  width: 100%;
+  height: 100%;
+}
 .copyright {
   color: #828282;
   font-size: 16px;
   font-size: 700;
   padding-top: 10px;
   text-align: center;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.copyright:hover span {
+  color: #8dc63f;
 }
 @media screen and (max-width: 767px) {
   .footer-content {

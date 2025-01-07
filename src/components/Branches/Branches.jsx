@@ -1,77 +1,95 @@
 import React from "react";
-import { Carousel, Card } from "antd";
+import Slider from "react-slick";
+import { Card } from "antd";
 import "./Branches.css";
 import image1 from "../../assets/location-ic.png";
 import image2 from "../../assets/Call.png";
-
-const branches = [
-  {
-    title: "3rd Branch",
-    address: "Elnady Street, Elnady Square",
-    phone: "16226",
-  },
-  {
-    title: "2nd Branch",
-    address: "Saied Street In Front Of Faculty Of Commerce",
-    phone: "16226",
-  },
-  {
-    title: "1st Branch",
-    address: "El-Giesh St.",
-    phone: "16226",
-  },
-];
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 function Branches() {
+  const { t } = useTranslation();
+
+  const branches = [
+    {
+      desc: t("branch1Desc"),
+      address: t("branch1Address"),
+      phone: "16226",
+    },
+    {
+      desc: t("branch2Desc"),
+      address: t("branch2Address"),
+      phone: "16226",
+    },
+    {
+      desc: t("branch3Desc"),
+      address: t("branch3Address"),
+      phone: "16226",
+    },
+    {
+      desc: t("branch4Desc"),
+      address: t("branch4Address"),
+      phone: "16226",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "10px",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <section className="branches" aria-labelledby="branches">
+    <section className="branches">
       <div className="container">
-        <h2 className="branches-title">The Nearst branche</h2>
-        <p className="branches-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
-          pharetra dictum neque massa congue
-        </p>
+        <h2 className="branches-title">{t("branchTitle")}</h2>
+        <p className="branches-desc">{t("branchDesc")}</p>
         <div className="branches-slider">
-          <Carousel
-            dots={true}
-            autoplay={true}
-            slidesToShow={4}
-            slidesToScroll={1}
-            centerMode={true} // تفعيل الوضع المركزي لعرض المسافات بين العناصر
-            responsive={[
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3,
-                },
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 2,
-                },
-              },
-            ]}
-            aria-live="polite" // لتوضيح أن هذا الكاروسيل ديناميكي
-          >
+          <Slider {...settings}>
             {branches.map((branch, index) => (
-              <Card
-                key={index}
-                style={{ margin: "0 15px" }} // إضافة مسافة أفقية بين الكروت
-                className="branch-card"
-              >
+              <Card className="branch-card" key={index}>
                 <div className="branch-content">
-                  <img src={image1} alt="image" />
-                  <p className="branch-title">{branch.title}</p>
+                  <img src={image1} alt="location icon" />
+                  <p className="branch-desc">{branch.desc}</p>
                   <h4 className="branch-address">{branch.address}</h4>
                   <p className="branch-phone">
-                    <img src={image2} alt="image" />
+                    <img src={image2} alt="phone icon" />
                     {branch.phone}
                   </p>
                 </div>
               </Card>
             ))}
-          </Carousel>
+          </Slider>
         </div>
       </div>
     </section>

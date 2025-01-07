@@ -12,6 +12,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.ant-dropdown {
+  z-index: 9999999999999;
+}
 .logo {
   width: 70px;
   height: 70px;
@@ -22,8 +25,35 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.ant-btn {
+  height: 50px;
+  width: 50px;
+  color: #8dc63f;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #8dc63f;
+}
+.ant-dropdown {
+  z-index: 9999999999999;
+}
+:where(.css-dev-only-do-not-override-7ny38l).ant-btn-variant-outlined:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover,
+:where(.css-dev-only-do-not-override-7ny38l).ant-btn-variant-dashed:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  color: #8dc63f;
+  border-color: #8dc63f;
+  background: #ffffff;
+}
+.drop-Lang {
+  margin: 0 10px;
+}
 .contact-btn {
   background-color: #8dc63f;
+  display: inline-block;
+  margin-left: 10px;
   color: #fff;
   text-transform: uppercase;
   width: 140px;
@@ -97,5 +127,14 @@
     height: 40px;
     font-size: 15px;
     line-height: 40px;
+  }
+  .drop-Lang {
+    margin: 0 5px;
+  }
+  .navbar
+    .ant-btn.css-dev-only-do-not-override-7ny38l.ant-btn-default.ant-btn-color-default.ant-btn-variant-outlined.ant-dropdown-trigger.drop-Lang {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
   }
 }
