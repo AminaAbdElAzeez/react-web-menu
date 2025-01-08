@@ -21,6 +21,7 @@ footer {
 }
 .footer-right {
   justify-content: flex-end;
+  margin-bottom: 5px;
 }
 .footer-left li {
   text-transform: capitalize;
