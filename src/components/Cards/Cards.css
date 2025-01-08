@@ -13,9 +13,19 @@
   width: 240px;
 }
 .card-img {
-  width: 75px;
-  height: 95px;
+  width: 65px;
+  height: 85px;
   margin-bottom: 10px;
+}
+.dawnload-img {
+  width: 100px;
+  height: 85px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .card-title {
   color: #333333;

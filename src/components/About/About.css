@@ -17,6 +17,7 @@
 .about-left img {
   width: 94%;
   height: auto;
+  object-fit: cover;
 }
 .about-title {
   color: #000;

@@ -64,6 +64,8 @@ const resources = {
       cardTitle1: "Branches",
       cardTitle2: "Menus",
       learn: "Learn More",
+      cardTitle3: "Dawnload App",
+      getStart: "Get Started",
 
       cairoLink: "Cairo",
       zagazigLink: "Zagazig",
@@ -143,6 +145,8 @@ const resources = {
       cardTitle1: "الفروع",
       cardTitle2: "القوائم",
       learn: "لمعرفة المزيد",
+      cardTitle3: "نزل التطبيق",
+      getStart: "ابدأ الآن",
 
       cairoLink: "القاهرة",
       zagazigLink: "الزقازيق",

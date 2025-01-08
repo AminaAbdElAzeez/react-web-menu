@@ -5,10 +5,10 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cairo from "./Routes/Cairo/Cairo.jsx";
 import RootLayout from "./Routes/RootLayout/RootLayout.jsx";
-import Tanta from "./Routes/Tanta/Tanta.jsx";
 import "./components/Translation/i18n.jsx";
-import Zagazig from "./Routes/Zagazig/Zagazig.jsx";
+import Tanta from "./Routes/Tanta/Tanta.jsx";
 import Almahala from "./Routes/Almahala/Almahala.jsx";
+import Zagazig from "./Routes/Zagazig/Zagazig.jsx";
 
 const routes = createBrowserRouter([
   {

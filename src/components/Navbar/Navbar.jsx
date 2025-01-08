@@ -6,12 +6,10 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-
-  // تغيير اللغة وتخزينها في localStorage
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     localStorage.setItem("language", lng);
-    document.documentElement.dir = lng === "ar" ? "rtl" : "ltr"; // ضبط اتجاه النص
+    document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
   };
   const languageMenu = {
     items: [
