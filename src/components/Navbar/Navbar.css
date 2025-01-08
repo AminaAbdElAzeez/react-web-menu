@@ -53,7 +53,7 @@
 .contact-btn {
   background-color: #8dc63f;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 5px;
   color: #fff;
   text-transform: uppercase;
   width: 140px;
@@ -123,9 +123,9 @@
     height: 60px;
   }
   .contact-btn {
-    width: 120px;
+    width: 115px;
     height: 40px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 40px;
   }
   .drop-Lang {

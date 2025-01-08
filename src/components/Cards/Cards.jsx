@@ -2,19 +2,21 @@ import React, { useState } from "react";
 import { Button, Card, Modal } from "antd";
 import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons";
 import image1 from "../../assets/Frame1.png";
-import image2 from "../../assets/location-ic.png";
+import image2 from "../../assets/Frame.png";
 import "./Cards.css";
-import Branches from "../Branches/Branches";
 import MenusName from "../MenusName/MenusName";
 import { useTranslation } from "react-i18next";
+import BranchesName from "../BranchesName/BranchesName";
+import Branches from "../Branches/Branches";
 
 function Cards() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
+  const [selectedBranch, setSelectedBranch] = useState(null);
   const { t, i18n } = useTranslation();
 
   const showBranchesModal = () => {
-    setModalContent(<Branches />);
+    setModalContent(<BranchesName onBranchSelect={handleBranchSelect} />);
     setIsModalOpen(true);
   };
 
@@ -23,9 +25,15 @@ function Cards() {
     setIsModalOpen(true);
   };
 
+  const handleBranchSelect = (branch) => {
+    setSelectedBranch(branch);
+    setModalContent(<Branches selectedBranch={branch} />);
+  };
+
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setModalContent(null);
+    setSelectedBranch(null);
   };
 
   return (
@@ -68,7 +76,7 @@ function Cards() {
       </div>
 
       <Modal
-        title="Details"
+        title={selectedBranch ? t("detailsBranch") : t("details")}
         open={isModalOpen}
         onCancel={handleCloseModal}
         footer={null}

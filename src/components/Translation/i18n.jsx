@@ -7,7 +7,7 @@ const resources = {
       contact: "Contact Us",
       mainTitle:
         "Why stay <span>hungry</span> <br /> when <br /> you can order <span>now!</span>",
-      mainDesc: "Download the bella onoje’s <br/> food app now on",
+      mainDesc: "Download the Creb & Waffle <br/> food app now",
       crepes: "Crepes",
       waffles: "Waffles",
       seaFood: "Sea Food",
@@ -74,6 +74,13 @@ const resources = {
       zagazigMenu: "Zagazig Menu",
       tantaMenu: "Tanta Menu",
       almahalaMenu: "Almahala Menu",
+
+      cairoBranch: "Cairo Branch",
+      zagazigBranch: "Zagazig Branch",
+      tantaBranch: "Tanta Branch",
+      almahalaBranch: "Almahala Branch",
+      details: "Details",
+      detailsBranch: "Details Branch",
     },
   },
   ar: {
@@ -81,12 +88,12 @@ const resources = {
       contact: "اتصل بنا",
       mainTitle:
         "لماذا تبقى <span>جائعا</span> <br /> عندما <br /> يمكنك الطلب <span>الان!</span>",
-      mainDesc: " قم بتنزيل تطبيق الطعام الخاص بـ <br/> Bella Onoje الآن على",
+      mainDesc: " قم بتنزيل تطبيق الطعام الخاص بـ <br/> كريب & وافل الآن",
       crepes: "الكريب",
       waffles: "الوافلز",
       seaFood: "المأكولات البحرية",
       juices: "العصائر",
-      aboutTitle: "نبذة عن <span>CREB & WAFFLE</span>",
+      aboutTitle: "نبذة عن <span>كريب & وافل </span>",
       aboutDesc1:
         "قم بتنزيل تطبيقنا من متجر جوجل بلاي أو متجر التطبيقات ولن تقلق بشأن طعامك بعد الآن. قم بتنزيل تطبيقنا من متجر جوجل بلاي أو متجر التطبيقات ولن تقلق بشأن طعامك بعد الآن.",
       aboutDesc2:
@@ -146,6 +153,14 @@ const resources = {
       zagazigMenu: "قائمة الزقازيق",
       tantaMenu: "قائمة طنطا",
       almahalaMenu: "قائمة المحلة",
+
+      cairoBranch: "فرع القاهرة",
+      zagazigBranch: "فرع الزقازيق",
+      tantaBranch: "فرع طنطا",
+      almahalaBranch: "فرع المحلة",
+
+      details: "تفاصيل",
+      detailsBranch: "تفاصيل الفرع",
     },
   },
 };

@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 
-function Branches() {
+function Branches({ selectedBranch }) {
   const { t } = useTranslation();
 
   const branches = [
@@ -18,6 +18,7 @@ function Branches() {
       phone: "16226",
       lat: 30.02175,
       long: 31.4443611,
+      branch: "cairo",
     },
     {
       desc: t("branch2Desc"),
@@ -25,6 +26,7 @@ function Branches() {
       phone: "16226",
       lat: 30.588146,
       long: 31.4877952,
+      branch: "zagazig",
     },
     {
       desc: t("branch3Desc"),
@@ -32,6 +34,7 @@ function Branches() {
       phone: "16226",
       lat: 30.9779279,
       long: 31.1713644,
+      branch: "almahala",
     },
     {
       desc: t("branch4Desc"),
@@ -39,6 +42,7 @@ function Branches() {
       phone: "16226",
       lat: 30.788313,
       long: 31.000022,
+      branch: "tanta",
     },
     {
       desc: t("branch5Desc"),
@@ -46,6 +50,7 @@ function Branches() {
       phone: "16226",
       lat: 30.799004,
       long: 31.00132,
+      branch: "tanta",
     },
     {
       desc: t("branch6Desc"),
@@ -53,8 +58,13 @@ function Branches() {
       phone: "16226",
       lat: 30.7959398,
       long: 30.9919414,
+      branch: "tanta",
     },
   ];
+
+  const filteredBranches = branches.filter(
+    (branch) => branch.branch === selectedBranch
+  );
 
   const settings = {
     dots: true,
@@ -96,9 +106,33 @@ function Branches() {
     <section className="branches">
       <div className="container">
         <div className="branches-slider">
-          <Slider {...settings}>
-            {branches.map((branch, index) => (
-              <Card className="branch-card" key={index}>
+          {filteredBranches.length > 1 ? (
+            <Slider {...settings}>
+              {filteredBranches.map((branch, index) => (
+                <Card className="branch-card" key={index}>
+                  <div className="branch-content">
+                    <img src={image1} alt="location icon" />
+                    <p className="branch-desc">{branch.desc}</p>
+                    <a
+                      className="branch-address"
+                      href={`https://www.google.com/maps?q=${branch.lat},${branch.long}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#1890ff", cursor: "pointer" }}
+                    >
+                      {branch.address}
+                    </a>
+                    <p className="branch-phone">
+                      <img src={image2} alt="phone icon" />
+                      {branch.phone}
+                    </p>
+                  </div>
+                </Card>
+              ))}
+            </Slider>
+          ) : (
+            filteredBranches.map((branch, index) => (
+              <Card className="branch-card single-branch" key={index}>
                 <div className="branch-content">
                   <img src={image1} alt="location icon" />
                   <p className="branch-desc">{branch.desc}</p>
@@ -117,8 +151,8 @@ function Branches() {
                   </p>
                 </div>
               </Card>
-            ))}
-          </Slider>
+            ))
+          )}
         </div>
       </div>
     </section>
