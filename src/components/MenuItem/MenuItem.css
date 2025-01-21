@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #6d6e71;
   font-size: 17px;
   font-weight: 600;
@@ -13,6 +13,11 @@
   -moz-transition: border 0.5s;
   -ms-transition: border 0.5s;
   -o-transition: border 0.5s;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 .menu-item-list li:hover {
   border: 1px solid #8bc341;

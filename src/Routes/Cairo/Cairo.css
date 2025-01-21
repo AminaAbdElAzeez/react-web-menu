@@ -1,12 +1,14 @@
 .pages-menu-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  flex-direction: column;
+
   gap: 50px;
 }
 .pages-menu-left,
 .pages-menu-right {
-  width: 48%;
+  width: 100%;
 }
 .cairo-img {
   width: 100%;

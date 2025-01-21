@@ -3,7 +3,7 @@ import "./MenusName.css";
 import { Tooltip } from "antd";
 import { useTranslation } from "react-i18next";
 
-function MenusName() {
+function MenusName({ onMenuSelect }) {
   const color = "#333333";
   const { t } = useTranslation();
 
@@ -12,16 +12,16 @@ function MenusName() {
       <div className="container">
         <div className="menus-name-content">
           <Tooltip title={t("cairoMenu")} color={color}>
-            <Link to="/cairo">{t("cairoLink")}</Link>
+            <button onClick={() => onMenuSelect("Cairo")}>{t("cairoLink")}</button>
           </Tooltip>
           <Tooltip title={t("zagazigMenu")} color={color}>
-            <Link to="/zagazig">{t("zagazigLink")}</Link>
+            <button onClick={() => onMenuSelect("Zagazig")}>{t("zagazigLink")}</button>
           </Tooltip>
           <Tooltip title={t("tantaMenu")} color={color}>
-            <Link to="/tanta">{t("tantaLink")}</Link>
+            <button onClick={() => onMenuSelect("Tanta")}>{t("tantaLink")}</button>
           </Tooltip>
           <Tooltip title={t("almahalaMenu")} color={color}>
-            <Link to="/almahala">{t("almahalaLink")}</Link>
+            <button onClick={() => onMenuSelect("Almahala")}>{t("almahalaLink")}</button>
           </Tooltip>
         </div>
       </div>

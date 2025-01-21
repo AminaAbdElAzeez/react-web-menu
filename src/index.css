@@ -19,3 +19,13 @@ body {
   direction: ltr;
   text-align: left;
 }
+
+:where(.css-dev-only-do-not-override-7ny38l).ant-modal .ant-modal-content  {
+  padding: 20px 10px;
+}
+@media (max-width: 767px) {
+  :where(.css-dev-only-do-not-override-7ny38l).ant-modal-root .ant-modal {
+      max-width: calc(100vw - 25px);
+      margin: 8px auto;
+  }
+}

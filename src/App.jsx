@@ -15,12 +15,12 @@ function App() {
       <Dawnload />
       {/*<Kinds />*/}
       <About />
-      <Cards />
+      {/* <Cards /> */}
       {/*<Menus />*/}
       <Services />
       {/*<Branches />*/}
       <Contact />
-      <Pocket />
+      {/* <Pocket /> */}
     </div>
   );
 }

@@ -10,6 +10,10 @@ import MenusName from "../MenusName/MenusName";
 import { useTranslation } from "react-i18next";
 import BranchesName from "../BranchesName/BranchesName";
 import Branches from "../Branches/Branches";
+import Cairo from "../../Routes/Cairo/Cairo";
+import Zagazig from "../../Routes/Zagazig/Zagazig";
+import Tanta from "../../Routes/Tanta/Tanta";
+import Almahala from "../../Routes/Almahala/Almahala";
 
 function Cards() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,8 +27,27 @@ function Cards() {
   };
 
   const showMenusModal = () => {
-    setModalContent(<MenusName />);
+    setModalContent(<MenusName onMenuSelect={handleMenuSelect} />);
     setIsModalOpen(true);
+  };
+
+  const handleMenuSelect = (menu) => {
+    switch (menu) {
+      case "Cairo":
+        setModalContent(<Cairo />);
+        break;
+      case "Zagazig":
+        setModalContent(<Zagazig />);
+        break;
+      case "Tanta":
+        setModalContent(<Tanta />);
+        break;
+      case "Almahala":
+        setModalContent(<Almahala />);
+        break;
+      default:
+        setModalContent(null);
+    }
   };
 
   const handleBranchSelect = (branch) => {
@@ -75,7 +98,7 @@ function Cards() {
             </Button>
           </Card>
           <Card hoverable className="card-item">
-            <img alt="Menus" src={image3} className="dawnload-img" />
+            <img alt="Download App" src={image3} className="dawnload-img" />
             <h4 className="card-title">{t("cardTitle3")}</h4>
             <Button
               type="primary"
