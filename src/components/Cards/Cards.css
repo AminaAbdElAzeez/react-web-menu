@@ -81,3 +81,8 @@
     -o-transform: translateX(-10px);
   }
 }
+.modalLarge {
+  width: 95% !important;
+  height: auto;
+  overflow: hidden;
+}

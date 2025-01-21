@@ -15,11 +15,14 @@ import Zagazig from "../../Routes/Zagazig/Zagazig";
 import Tanta from "../../Routes/Tanta/Tanta";
 import Almahala from "../../Routes/Almahala/Almahala";
 
+
 function Cards() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [selectedBranch, setSelectedBranch] = useState(null);
   const { t, i18n } = useTranslation();
+  const [isLargeModal, setIsLargeModal] = useState(false);
+
 
   const showBranchesModal = () => {
     setModalContent(<BranchesName onBranchSelect={handleBranchSelect} />);
@@ -29,9 +32,11 @@ function Cards() {
   const showMenusModal = () => {
     setModalContent(<MenusName onMenuSelect={handleMenuSelect} />);
     setIsModalOpen(true);
+    setIsLargeModal(false);
   };
 
   const handleMenuSelect = (menu) => {
+    setIsLargeModal(true);
     switch (menu) {
       case "Cairo":
         setModalContent(<Cairo />);
@@ -47,6 +52,7 @@ function Cards() {
         break;
       default:
         setModalContent(null);
+        setIsLargeModal(false);
     }
   };
 
@@ -59,6 +65,7 @@ function Cards() {
     setIsModalOpen(false);
     setModalContent(null);
     setSelectedBranch(null);
+    setIsLargeModal(false);
   };
 
   return (
@@ -119,11 +126,11 @@ function Cards() {
       </div>
 
       <Modal
-        title={selectedBranch ? t("detailsBranch") : t("details")}
         open={isModalOpen}
         onCancel={handleCloseModal}
         footer={null}
         style={{ overflow: "hidden" }}
+        className={isLargeModal ? "modalLarge" : ""}
       >
         {modalContent}
       </Modal>

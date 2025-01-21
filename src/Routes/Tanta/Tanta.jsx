@@ -2,12 +2,13 @@ import image8 from "../../assets/footer.png";
 import MenuSection from "../../components/MenuSection/MenuSection";
 import { menuItems } from "../../components/Data/Cairo.jsx";
 import Header from "../../components/Header/Header.jsx";
+import { useTranslation } from "react-i18next";
 
 function Tanta() {
+      const { t } = useTranslation();
   return (
     <section className="cairo-page">
-      <Header title={"MENU TANTA"} />
-      <div className="container">
+      <Header title={t("tantaMenu")} />
         <div className="pages-menu-content">
           <div className="pages-menu-left">
             {menuItems
@@ -27,7 +28,6 @@ function Tanta() {
         <div className="cairo-img">
           <img src={image8} alt="footer" />
         </div>
-      </div>
     </section>
   );
 }
