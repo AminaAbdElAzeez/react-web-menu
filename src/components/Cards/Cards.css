@@ -85,4 +85,5 @@
   width: 95% !important;
   height: auto;
   overflow: hidden;
+  z-index: 99999999;
 }

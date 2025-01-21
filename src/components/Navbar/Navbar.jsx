@@ -1,21 +1,17 @@
+import { Button } from "antd";
 import logo from "../../assets/c&w-logo.4a595d99 1.png";
 import "./Navbar.css";
 import { useTranslation } from "react-i18next";
-import { Dropdown, Button } from "antd";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem("language", lng);
-    document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
-  };
-  const languageMenu = {
-    items: [
-      { key: "en", label: "En", onClick: () => changeLanguage("en") },
-      { key: "ar", label: "Ar", onClick: () => changeLanguage("ar") },
-    ],
+
+  const toggleLanguage = () => {
+    const newLanguage = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
+    document.documentElement.dir = newLanguage === "ar" ? "rtl" : "ltr";
   };
 
   return (
@@ -26,14 +22,9 @@ function Navbar() {
             <img src={logo} alt="logo" className="logo" />
           </Link>
           <div>
-            <Dropdown
-              menu={languageMenu}
-              placement="bottomRight"
-              arrow
-              className="drop-Lang"
-            >
-              <Button>{i18n.language === "en" ? "En" : "Ar"}</Button>
-            </Dropdown>
+            <Button onClick={toggleLanguage} className="lang-toggle-btn">
+              {i18n.language === "en" ? "Ar" : "En"}
+            </Button>
             <a href="#contact" className="contact-btn">
               {t("contact")}
             </a>

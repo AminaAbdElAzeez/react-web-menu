@@ -30,11 +30,11 @@
   -o-border-radius: 20pz;
 }
 @media screen and (max-width: 767px) {
-  /* .pages-menu-content {
+  .pages-menu-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 50px; */
+    gap: 50px;
   }
   .pages-menu-left,
   .pages-menu-right {

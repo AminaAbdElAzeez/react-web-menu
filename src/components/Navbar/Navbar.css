@@ -37,7 +37,7 @@
 .ant-dropdown {
   z-index: 9999999999999;
 }
-:where(.css-dev-only-do-not-override-7ny38l).ant-btn-variant-outlined:not(
+/* :where(.css-dev-only-do-not-override-7ny38l).ant-btn-variant-outlined:not(
     :disabled
   ):not(.ant-btn-disabled):hover,
 :where(.css-dev-only-do-not-override-7ny38l).ant-btn-variant-dashed:not(
@@ -46,9 +46,15 @@
   color: #8dc63f;
   border-color: #8dc63f;
   background: #ffffff;
-}
-.drop-Lang {
+} */
+.lang-toggle-btn {
   margin: 0 10px;
+  width: 45px;
+  height: 45px;
+}
+.lang-toggle-btn:hover {
+  border-color: #8dc63f !important;
+  color: #8dc63f !important;
 }
 .contact-btn {
   background-color: #8dc63f;
@@ -128,13 +134,9 @@
     font-size: 14px;
     line-height: 40px;
   }
-  .drop-Lang {
+  .lang-toggle-btn {
     margin: 0 5px;
-  }
-  .navbar
-    .ant-btn.css-dev-only-do-not-override-7ny38l.ant-btn-default.ant-btn-color-default.ant-btn-variant-outlined.ant-dropdown-trigger.drop-Lang {
-    height: 40px;
     width: 40px;
-    font-size: 16px;
+    height: 40px;
   }
 }
