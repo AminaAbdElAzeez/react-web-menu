@@ -122,9 +122,19 @@
   .menu-item-new {
     font-size: 4px;
     padding: 2px;
-    margin-right: 2px;
+    margin-right: 3px;
   }
   .hot-cold {
     font-size: 4px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu-item-list li {
+    font-size: 7px;
+  }
+  .menu-item-new {
+    font-size: 3px;
+    padding: 2px;
+    margin-right: 3px;
   }
 }
