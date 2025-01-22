@@ -102,7 +102,7 @@
     font-size: 8px;
   }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 373px) {
   .menu-item-list li {
     font-size: 10px;
   }
@@ -115,7 +115,7 @@
     font-size: 5px;
   }
 }
-@media screen and (max-width: 335px) {
+@media screen and (max-width: 346px) {
   .menu-item-list li {
     font-size: 8px;
   }
