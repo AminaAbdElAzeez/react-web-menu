@@ -8,7 +8,7 @@
 }
 .pages-menu-left,
 .pages-menu-right {
-  width: 48%;
+  width: 50%;
 }
 .cairo-img {
   width: 100%;
@@ -29,15 +29,25 @@
   -ms-border-radius: 20pz;
   -o-border-radius: 20pz;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 695px) {
   .pages-menu-content {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pages-menu-content {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* .pages-menu-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 50px;
-  }
-  .pages-menu-left,
+  } */
+  /* .pages-menu-left,
   .pages-menu-right {
-    width: 100%;
-  }
+    width: 50%;
+  } */
 }

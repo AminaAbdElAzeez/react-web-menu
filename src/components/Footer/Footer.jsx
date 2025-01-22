@@ -15,14 +15,14 @@ function Footer() {
             <li>{t("privacy")}</li>
             <li>{t("terms")}</li>
           </ul>
-          <ul className="footer-right">
+          {/*<ul className="footer-right">
             <li>
               <img src={image1} alt="image" />
             </li>
             <li>
               <img src={image2} alt="image" />
             </li>
-          </ul>
+          </ul>*/}
         </div>
         <hr />
         <p className="copyright">{t("copyright")}</p>

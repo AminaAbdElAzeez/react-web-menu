@@ -50,7 +50,10 @@
 .hot-cold .cold {
   color: #8bc341;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 695px) {
+  .menu-item-list li {
+    font-size: 15px;
+  }
   .menu-item-new {
     font-size: 10px;
     padding: 5px;
@@ -58,5 +61,70 @@
   }
   .hot-cold {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .menu-item-list li {
+    font-size: 14px;
+  }
+  .menu-item-new {
+    font-size: 8px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  .hot-cold {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 465px) {
+  .menu-item-list li {
+    font-size: 12px;
+  }
+  .menu-item-new {
+    font-size: 6px;
+    padding: 2px;
+    margin-right: 5px;
+  }
+  .hot-cold {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .menu-item-list li {
+    font-size: 10px;
+  }
+  .menu-item-new {
+    font-size: 6px;
+    padding: 2px;
+    margin-right: 5px;
+  }
+  .hot-cold {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .menu-item-list li {
+    font-size: 10px;
+  }
+  .menu-item-new {
+    font-size: 5px;
+    padding: 2px;
+    margin-right: 5px;
+  }
+  .hot-cold {
+    font-size: 5px;
+  }
+}
+@media screen and (max-width: 335px) {
+  .menu-item-list li {
+    font-size: 8px;
+  }
+  .menu-item-new {
+    font-size: 4px;
+    padding: 2px;
+    margin-right: 2px;
+  }
+  .hot-cold {
+    font-size: 4px;
   }
 }

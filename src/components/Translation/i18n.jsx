@@ -7,12 +7,12 @@ const resources = {
       contact: "Contact Us",
       mainTitle:
         "Why stay <span>hungry</span> <br /> when <br /> you can order <span>now!</span>",
-      mainDesc: "Download the Creb & Waffle <br/> food app now",
+      mainDesc: "Download the Crepe & Waffle <br/> food app now",
       crepes: "Crepes",
       waffles: "Waffles",
       seaFood: "Sea Food",
       juices: "Juices",
-      aboutTitle: "About <span>CREB & WAFFLE</span>",
+      aboutTitle: "About <span>CREPE & WAFFLE</span>",
       aboutDesc1:
         "Download our app from google play or app store and you don’t have to be worry about your food anymore. Download our app from google play or app store and you don’t have to be worry about your food anymore.",
       aboutDesc2:

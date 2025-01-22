@@ -48,12 +48,12 @@
     max-height: 400px;
   }
   .about-title {
-    font-size: 35px;
+    font-size: 34px;
   }
 }
 @media screen and (max-width: 992px) {
   .about-title {
-    font-size: 30px;
+    font-size: 28px;
   }
   .about-desc {
     font-size: 16px;
@@ -111,7 +111,7 @@
     height: 230px;
   } */
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 367px) {
   .about-title {
     font-size: 22px;
   }
@@ -120,9 +120,12 @@
   }
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 325px) {
   .about-title {
-    font-size: 19px;
+    font-size: 18px;
+  }
+  .about-desc {
+    font-size: 13px;
   }
 }
 

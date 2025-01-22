@@ -2,7 +2,7 @@ import React from "react";
 import "./Dawnload.css";
 import image1 from "../../assets/Mask group.png";
 import { useTranslation, Trans } from "react-i18next";
-import Cards from "../Cards/Cards"
+import Cards from "../Cards/Cards";
 import DawnloadText from "../DawnloadText/DawnloadText";
 
 function Dawnload() {
@@ -38,8 +38,8 @@ function Dawnload() {
           </div>
         </div>
       </div>
-      <Cards/>
-      <DawnloadText/>
+      <Cards />
+      {/*<DawnloadText/>*/}
     </section>
   );
 }
