@@ -130,7 +130,7 @@
 }
 @media screen and (max-width: 320px) {
   .menu-item-list li {
-    font-size: 7px;
+    font-size: 6px;
   }
   .menu-item-new {
     font-size: 3px;
