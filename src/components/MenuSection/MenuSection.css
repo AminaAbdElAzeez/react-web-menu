@@ -120,3 +120,11 @@
     font-size: 14px;
   }
 } */
+@media screen and (max-width: 306px) {
+  .pages-menu-item-title {
+    padding: 10px 5px;
+  }
+  .pages-menu-item-h3 {
+    font-size: 9px;
+  }
+}
