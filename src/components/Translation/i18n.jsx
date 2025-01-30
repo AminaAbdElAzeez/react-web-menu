@@ -61,8 +61,8 @@ const resources = {
       terms: "Terms & Conditions",
       copyright: "Copyright ©2024 Apps Square",
       // card
-      cardTitle1: "Branches",
-      cardTitle2: "Menus",
+      cardTitle1: "Branches Locations",
+      cardTitle2: "Food Menus",
       learn: "Learn More",
       cardTitle3: "Dawnload App",
       getStart: "Get Started",
@@ -83,6 +83,7 @@ const resources = {
       almahalaBranch: "Almahala Branch",
       details: "Details",
       detailsBranch: "Details Branch",
+      back:"Back"
     },
   },
   ar: {
@@ -142,8 +143,8 @@ const resources = {
       terms: "الشروط والأحكام",
       copyright: "حقوق الطبع والنشر © 2024 Apps Square",
       // card
-      cardTitle1: "الفروع",
-      cardTitle2: "القوائم",
+      cardTitle1: "مواقع الفروع",
+      cardTitle2: "قوائم الطعام",
       learn: "لمعرفة المزيد",
       cardTitle3: "نزل التطبيق",
       getStart: "ابدأ الآن",
@@ -165,6 +166,7 @@ const resources = {
 
       details: "تفاصيل",
       detailsBranch: "تفاصيل الفرع",
+      back:"رجوع"
     },
   },
 };

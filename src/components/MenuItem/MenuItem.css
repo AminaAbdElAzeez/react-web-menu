@@ -1,26 +1,12 @@
 .menu-item-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* margin-bottom: 0px;
   color: #6d6e71;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 5px 10px;
-  border: 1px solid #fff;
-  transition: border 0.5s;
-  -webkit-transition: border 0.5s;
-  -moz-transition: border 0.5s;
-  -ms-transition: border 0.5s;
-  -o-transition: border 0.5s;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-}
-.menu-item-list li:hover {
-  border: 1px solid #8bc341;
+  font-size: 22px;
+  font-weight: 600; */
+  margin: 10px 0;
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -50,9 +36,49 @@
 .hot-cold .cold {
   color: #8bc341;
 }
-@media screen and (max-width: 695px) {
-  .menu-item-list li {
-    font-size: 15px;
+.collapse {
+  width: 100%;
+  /* margin-bottom: 0px; */
+  color: #6d6e71;
+  background-color: #f9f9f9;
+  border: none;
+  font-size: 22px;
+  font-weight: 600;
+  /* padding: 5px 10px; */
+  /* border: 1px solid #fff; */
+  /* transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -ms-transition: border 0.5s;
+  -o-transition: border 0.5s; */
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.collapse-content {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+
+}
+:where(.css-dev-only-do-not-override-7ny38l).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-expand-icon {
+  display: none;
+}
+:where(.css-dev-only-do-not-override-7ny38l).ant-collapse .ant-collapse-content {
+  border-top: none;
+}
+.collapse-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8A8080;
+  text-align: right;
+}
+@media screen and (max-width: 800px) {
+  .collapse {
+    font-size: 20px;
   }
   .menu-item-new {
     font-size: 10px;
@@ -63,9 +89,19 @@
     font-size: 14px;
   }
 }
-@media screen and (max-width: 540px) {
-  .menu-item-list li {
+@media screen and (max-width:831px) {
+  .collapse-text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:710px) {
+  .collapse-text {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 605px) {
+  .collapse {
+    font-size: 18px;
   }
   .menu-item-new {
     font-size: 8px;
@@ -76,9 +112,9 @@
     font-size: 10px;
   }
 }
-@media screen and (max-width: 465px) {
-  .menu-item-list li {
-    font-size: 12px;
+@media screen and (max-width: 530px) {
+  .collapse {
+    font-size: 16px;
   }
   .menu-item-new {
     font-size: 6px;
@@ -89,9 +125,9 @@
     font-size: 8px;
   }
 }
-@media screen and (max-width: 400px) {
-  .menu-item-list li {
-    font-size: 10px;
+@media screen and (max-width: 460px) {
+  .collapse {
+    font-size: 14px;
   }
   .menu-item-new {
     font-size: 6px;
@@ -102,9 +138,9 @@
     font-size: 8px;
   }
 }
-@media screen and (max-width: 373px) {
-  .menu-item-list li {
-    font-size: 10px;
+@media screen and (max-width: 430px) {
+  .collapse {
+    font-size: 13px;
   }
   .menu-item-new {
     font-size: 5px;
@@ -115,9 +151,9 @@
     font-size: 5px;
   }
 }
-@media screen and (max-width: 346px) {
-  .menu-item-list li {
-    font-size: 8px;
+@media screen and (max-width: 390px) {
+  .collapse {
+    font-size: 10px;
   }
   .menu-item-new {
     font-size: 4px;
@@ -127,14 +163,28 @@
   .hot-cold {
     font-size: 4px;
   }
+  .collapse-text {
+    font-size: 11px;
+  }
 }
-@media screen and (max-width: 320px) {
-  .menu-item-list li {
-    font-size: 6px;
+@media screen and (max-width: 335px) {
+  .collapse {
+    font-size: 8px;
   }
   .menu-item-new {
     font-size: 3px;
     padding: 2px;
     margin-right: 3px;
+  }
+  .collapse-text {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 310px) {
+  .collapse {
+    font-size: 6px;
+  }
+  .collapse-text {
+    font-size: 8px;
   }
 }

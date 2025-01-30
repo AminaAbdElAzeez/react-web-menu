@@ -15,27 +15,28 @@ import Zagazig from "../../Routes/Zagazig/Zagazig";
 import Tanta from "../../Routes/Tanta/Tanta";
 import Almahala from "../../Routes/Almahala/Almahala";
 
-
 function Cards() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
-  const [selectedBranch, setSelectedBranch] = useState(null);
+  const [previousContent, setPreviousContent] = useState(null);
   const { t, i18n } = useTranslation();
   const [isLargeModal, setIsLargeModal] = useState(false);
 
-
   const showBranchesModal = () => {
+    setPreviousContent(null);
     setModalContent(<BranchesName onBranchSelect={handleBranchSelect} />);
     setIsModalOpen(true);
   };
 
   const showMenusModal = () => {
+    setPreviousContent(null);
     setModalContent(<MenusName onMenuSelect={handleMenuSelect} />);
     setIsModalOpen(true);
     setIsLargeModal(false);
   };
 
   const handleMenuSelect = (menu) => {
+    setPreviousContent(<MenusName onMenuSelect={handleMenuSelect} />);
     setIsLargeModal(true);
     switch (menu) {
       case "Cairo":
@@ -57,15 +58,22 @@ function Cards() {
   };
 
   const handleBranchSelect = (branch) => {
-    setSelectedBranch(branch);
+    setPreviousContent(<BranchesName onBranchSelect={handleBranchSelect} />);
     setModalContent(<Branches selectedBranch={branch} />);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setModalContent(null);
-    setSelectedBranch(null);
+    setPreviousContent(null);
     setIsLargeModal(false);
+  };
+
+  const handleBack = () => {
+    if (previousContent) {
+      setModalContent(previousContent);
+      setPreviousContent(null);
+    }
   };
 
   return (
@@ -73,12 +81,12 @@ function Cards() {
       <div className="container">
         <div className="cards-content">
           <Card hoverable className="card-item">
-            <img alt="Branches" src={image1} className="card-img" />
-            <h4 className="card-title">{t("cardTitle1")}</h4>
+            <img alt="Menus" src={image2} className="card-img" />
+            <h4 className="card-title">{t("cardTitle2")}</h4>
             <Button
               type="primary"
               className="cards-item-btn"
-              onClick={showBranchesModal}
+              onClick={showMenusModal}
             >
               {t("learn")}
               {i18n.dir() === "rtl" ? (
@@ -89,12 +97,12 @@ function Cards() {
             </Button>
           </Card>
           <Card hoverable className="card-item">
-            <img alt="Menus" src={image2} className="card-img" />
-            <h4 className="card-title">{t("cardTitle2")}</h4>
+            <img alt="Branches" src={image1} className="card-img" />
+            <h4 className="card-title">{t("cardTitle1")}</h4>
             <Button
               type="primary"
               className="cards-item-btn"
-              onClick={showMenusModal}
+              onClick={showBranchesModal}
             >
               {t("learn")}
               {i18n.dir() === "rtl" ? (
@@ -128,6 +136,27 @@ function Cards() {
       <Modal
         open={isModalOpen}
         onCancel={handleCloseModal}
+        title={
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+            {previousContent && (
+              <Button
+                type="link"
+                onClick={handleBack}
+                className="backBtn"
+              >
+              {i18n.dir() === "rtl" ? (
+            <>
+              <DoubleRightOutlined className="back-icon"/>
+            </>
+          ) : (
+            <>
+              <DoubleLeftOutlined className="back-icon"/>
+            </>
+          )}
+              </Button>
+            )}
+          </div>
+        }
         footer={null}
         style={{ overflow: "hidden" }}
         className={isLargeModal ? "modalLarge" : ""}

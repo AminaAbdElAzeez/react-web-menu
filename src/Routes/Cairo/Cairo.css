@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap:15px;
 }
 .pages-menu-left,
 .pages-menu-right {
@@ -27,9 +27,9 @@
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
-@media screen and (max-width: 695px) {
+@media screen and (max-width: 768px) {
   .pages-menu-content {
-    gap: 15px;
+    gap: 12px;
   }
   .cairo-img {
     margin: 0px auto 0px auto;
@@ -38,5 +38,11 @@
 @media screen and (max-width: 480px) {
   .pages-menu-content {
     gap: 10px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .pages-menu-content {
+    gap: 7px;
   }
 }

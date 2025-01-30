@@ -71,7 +71,7 @@
   align-items: center;
 }
 .branch-phone > img {
-  margin-right: 5px;
+  margin: 0 5px;
 }
 .slick-list {
   height: 350px;

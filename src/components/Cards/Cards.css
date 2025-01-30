@@ -10,7 +10,7 @@
 }
 .card-item {
   text-align: center;
-  width: 240px;
+  width: 280px;
 }
 .card-img {
   width: 65px;
@@ -29,7 +29,7 @@
 }
 .card-title {
   color: #333333;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
   margin-bottom: 15px;
   transition: color 0.5s;
@@ -86,4 +86,46 @@
   height: auto;
   overflow: hidden;
   z-index: 99999999;
+}
+.backBtn {
+    width:40px !important;
+    height: 35px !important;
+}
+.back-icon {
+  font-family: 14px !important;
+  animation: bounceBtn 1s infinite ease-in-out alternate !important;
+  -webkit-animation: bounceBtn 1s infinite ease-in-out alternate !important;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.backBtn:hover .back-icon , .back-icon:hover {
+  color: #ff330f;
+}
+
+@keyframes bounceBtn {
+  0% {
+    transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+    -moz-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
+}
+  100% {
+    transform: translateX(-3px) ;
+    -webkit-transform: translateX(-3px) ;
+    -moz-transform: translateX(-3px) ;
+    -ms-transform: translateX(-3px) ;
+    -o-transform: translateX(-3px) ;
+}
+}
+@media screen and (max-width:350px) {
+  /* .card-item {
+    width: 250px;
+  } */
+  .card-title {
+    font-size: 18px;
+  }
 }
