@@ -64,9 +64,9 @@
   align-items: center;
 
 }
-.ant-collapse .ant-collapse-header {
+/* .ant-collapse .ant-collapse-header {
   padding-right: 0 !important;
-}
+} */
 :where(.css-dev-only-do-not-override-7ny38l).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-expand-icon {
   display: none !important;
 }
