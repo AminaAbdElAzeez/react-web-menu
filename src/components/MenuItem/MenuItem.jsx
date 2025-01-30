@@ -25,6 +25,7 @@ export default function MenuItem({ price, name, new: isNew, details }) {
   return (
     <li>
     <Collapse
+      expandIcon={() => null}
       items={[
         {
           key: '1',
