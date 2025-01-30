@@ -65,10 +65,10 @@
 
 }
 :where(.css-dev-only-do-not-override-7ny38l).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-expand-icon {
-  display: none;
+  display: none !important;
 }
 :where(.css-dev-only-do-not-override-7ny38l).ant-collapse .ant-collapse-content {
-  border-top: none;
+  border-top: none !important;
 }
 .collapse-text {
   font-size: 18px;
