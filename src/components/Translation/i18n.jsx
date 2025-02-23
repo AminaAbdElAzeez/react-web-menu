@@ -68,7 +68,7 @@ const resources = {
       getStart: "Get Started",
 
       cairoLink: "Cairo",
-      zagazigLink: "Zagazig",
+      zagazigLink: "Zagazeg",
       tantaLink: "Tanta",
       almahalaLink: "Almahala",
 
@@ -83,7 +83,13 @@ const resources = {
       almahalaBranch: "Almahala Branch",
       details: "Details",
       detailsBranch: "Details Branch",
-      back:"Back"
+      back:"Back",
+      downloadForAndroid:"Download For Android",
+      downloadForiOS:"Download For iOS",
+      cairoBranchName:"Cairo",
+      TantaBranchName:"Tanta",
+      MahallahBranchName:"Mahallah",
+      ZagazegBranchName:"Zagazeg"
     },
   },
   ar: {
@@ -166,7 +172,14 @@ const resources = {
 
       details: "تفاصيل",
       detailsBranch: "تفاصيل الفرع",
-      back:"رجوع"
+      back:"رجوع",
+      downloadForAndroid:"تحميل للاندرويد",
+      downloadForiOS:"تحميل لنظام iOS",
+      cairoBranchName:"القاهرة",
+      TantaBranchName:"طنطا",
+      MahallahBranchName:"المحلة",
+      ZagazegBranchName:"الزقازيق"
+
     },
   },
 };

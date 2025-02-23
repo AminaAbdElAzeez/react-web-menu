@@ -1,5 +1,5 @@
-import image1 from "../../assets/App Store Black.png";
-import image2 from "../../assets/Google Play Black.png";
+import image1 from "../../assets/AppStoreBlack.png";
+import image2 from "../../assets/GooglePlayBlack.png";
 import image3 from "../../assets/Group 51777.png";
 import "./Pocket.css";
 import { useTranslation } from "react-i18next";

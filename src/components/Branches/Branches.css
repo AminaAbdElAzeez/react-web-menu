@@ -30,7 +30,7 @@
 .branch-card {
   width: 190px !important;
   margin: 0 auto;
-  height: 350px;
+  height: 425px;
   background: #fff;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
@@ -74,7 +74,7 @@
   margin: 0 5px;
 }
 .slick-list {
-  height: 350px;
+  height: 450px;
   overflow: hidden;
 }
 .slick-slider,
@@ -129,4 +129,13 @@
   .branch-address {
     font-size: 12px;
   }
+}
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ant-spin-dot {
+  color: #8dc63f ;
+
 }

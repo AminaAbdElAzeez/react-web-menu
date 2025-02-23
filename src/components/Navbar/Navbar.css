@@ -2,7 +2,7 @@
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 9999;
+  z-index: 10;
   background-color: #f9f9f9;
   padding: 10px 0;
   box-shadow: 1px 1px 26px -7px #8dc63f;

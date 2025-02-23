@@ -4,6 +4,8 @@ import { DoubleRightOutlined, DoubleLeftOutlined } from "@ant-design/icons";
 import image1 from "../../assets/Frame1.png";
 import image2 from "../../assets/Frame.png";
 import image3 from "../../assets/app.png";
+import  app1Image from "../../assets/AppStoreBlack.png";
+import app2Image from "../../assets/GooglePlayBlack.png"
 
 import "./Cards.css";
 import MenusName from "../MenusName/MenusName";
@@ -76,6 +78,29 @@ function Cards() {
     }
   };
 
+  const showDownloadModal = () => {
+    setPreviousContent(null);
+    setModalContent(
+      <div className="download-links">
+      <button
+      className="img-app"
+          onClick={() => window.open("https://apps.apple.com/eg/app/crepe-waffle/id1456513640?l=ar", "_blank")}
+        >
+           <img src={app1Image} alt="Android"/>
+        </button>
+        <button
+        className="img-app"
+          onClick={() => window.open("https://crepe-waffle.com/", "_blank")}
+        >
+          <img src={app2Image} alt="ios"/>
+        </button>
+       
+      </div>
+    );
+    setIsModalOpen(true);
+  };
+  
+
   return (
     <section className="cards">
       <div className="container">
@@ -115,12 +140,25 @@ function Cards() {
           <Card hoverable className="card-item">
             <img alt="Download App" src={image3} className="dawnload-img" />
             <h4 className="card-title">{t("cardTitle3")}</h4>
-            <Button
+            {/* <Button
               type="primary"
               className="cards-item-btn"
               onClick={() =>
                 window.open("https://l.linklyhq.com/l/5raE", "_blank")
               }
+            >
+              {t("getStart")}
+              {i18n.dir() === "rtl" ? (
+                <DoubleLeftOutlined className="card-icon" />
+              ) : (
+                <DoubleRightOutlined className="card-icon" />
+              )}
+            </Button> */}
+
+            <Button
+              type="primary"
+              className="cards-item-btn"
+              onClick={showDownloadModal}
             >
               {t("getStart")}
               {i18n.dir() === "rtl" ? (

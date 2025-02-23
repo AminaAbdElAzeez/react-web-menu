@@ -8,8 +8,11 @@ function BranchesName({ onBranchSelect }) {
   const { t } = useTranslation();
 
   const handleBranchClick = (branch) => {
+    console.log(`📌 فرع تم اختياره: ${branch}`);
+
     onBranchSelect(branch);
   };
+  
 
   return (
     <section className="branches-name">
@@ -17,22 +20,22 @@ function BranchesName({ onBranchSelect }) {
         <div className="branches-name-content">
           <Tooltip title={t("cairoBranch")} color={color}>
             <Link to="#" onClick={() => handleBranchClick("cairo")}>
-              {t("cairoLink")}
+              {t("cairoBranchName")}
             </Link>
           </Tooltip>
           <Tooltip title={t("zagazigBranch")} color={color}>
-            <Link to="#" onClick={() => handleBranchClick("zagazig")}>
-              {t("zagazigLink")}
+            <Link to="#" onClick={() => handleBranchClick("zagazeg")}>
+              {t("ZagazegBranchName")}
             </Link>
           </Tooltip>
           <Tooltip title={t("tantaBranch")} color={color}>
             <Link to="#" onClick={() => handleBranchClick("tanta")}>
-              {t("tantaLink")}
+              {t("TantaBranchName")}
             </Link>
           </Tooltip>
           <Tooltip title={t("almahalaBranch")} color={color}>
-            <Link to="#" onClick={() => handleBranchClick("almahala")}>
-              {t("almahalaLink")}
+            <Link to="#" onClick={() => handleBranchClick("mahallah")}>
+              {t("MahallahBranchName")}
             </Link>
           </Tooltip>
         </div>

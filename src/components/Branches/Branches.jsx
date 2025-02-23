@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { Card } from "antd";
+import { Card, Spin } from "antd";
 import "./Branches.css";
 import image1 from "../../assets/location-ic.png";
 import image2 from "../../assets/Call.png";
@@ -10,61 +10,32 @@ import { useTranslation } from "react-i18next";
 
 function Branches({ selectedBranch }) {
   const { t } = useTranslation();
+  const [branches, setBranches] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const branches = [
-    {
-      desc: t("branch1Desc"),
-      address: t("branch1Address"),
-      phone: "16226",
-      lat: 30.02175,
-      long: 31.4443611,
-      branch: "cairo",
-    },
-    {
-      desc: t("branch2Desc"),
-      address: t("branch2Address"),
-      phone: "16226",
-      lat: 30.588146,
-      long: 31.4877952,
-      branch: "zagazig",
-    },
-    {
-      desc: t("branch3Desc"),
-      address: t("branch3Address"),
-      phone: "16226",
-      lat: 30.9779279,
-      long: 31.1713644,
-      branch: "almahala",
-    },
-    {
-      desc: t("branch4Desc"),
-      address: t("branch4Address"),
-      phone: "16226",
-      lat: 30.788313,
-      long: 31.000022,
-      branch: "tanta",
-    },
-    {
-      desc: t("branch5Desc"),
-      address: t("branch5Address"),
-      phone: "16226",
-      lat: 30.799004,
-      long: 31.00132,
-      branch: "tanta",
-    },
-    {
-      desc: t("branch6Desc"),
-      address: t("branch6Address"),
-      phone: "16226",
-      lat: 30.7959398,
-      long: 30.9919414,
-      branch: "tanta",
-    },
-  ];
+  
 
-  const filteredBranches = branches.filter(
-    (branch) => branch.branch === selectedBranch
-  );
+  const normalizeText = (text) =>
+    text?.trim().toLowerCase().replace(/\s+/g, "");
+  
+  useEffect(() => {
+    fetch("https://app.crepe-waffle.com/api/front/branches")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          console.log("🔹 بيانات الفروع المسترجعة:", data.data);
+          setBranches(data.data);
+        }
+      })
+      .catch((error) => console.error("❌ خطأ في جلب الفروع:", error))
+      .finally(() => setLoading(false));
+  }, []);
+  
+  const filteredBranches = branches.filter((branch) => {
+    return normalizeText(branch.branch) === normalizeText(selectedBranch);
+  });
+  
+  
 
   const settings = {
     dots: true,
@@ -78,29 +49,15 @@ function Branches({ selectedBranch }) {
     centerMode: true,
     centerPadding: "10px",
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 576, settings: { slidesToShow: 1, slidesToScroll: 1 } },
     ],
   };
+
+  if (loading) {
+    return <Spin size="large" className="loading-spinner" />;
+  }
 
   return (
     <section className="branches">
